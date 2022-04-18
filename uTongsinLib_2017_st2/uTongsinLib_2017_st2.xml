@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>uTongsinLib_2017_st2</name>
+    </assembly>
+    <members>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfC">
+            <summary>Bluetooth Rfcomm Client</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfC.eMODE">
+            <summary>recv type enum</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eMODE.TYPE_BY">
+            <summary>byte type</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eMODE.TYPE_ST">
+            <summary>string type</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.ERROR_ELEMENT_NOT_FOUND">
+            <summary>element not found</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.WSAEADDRINUSE">
+            <summary>only one usage of each socket address (protocol/network address/port) is normally permitted.</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.CONNECT_FAIL">
+            <summary>device connection fail</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.ERROR_OPERATION_ABORTED">
+            <summary>the I/O operation has been aborted because of either a thread exit or an application request</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.SdpServiceNameAttributeType">
+            <summary>
+            The SDP Type of the Service Name SDP attribute.
+            The first byte in the SDP Attribute encodes the SDP Attribute Type as follows :
+               -  the Attribute Type size in the least significant 3 bits,
+               -  the SDP Attribute Type value in the most significant 5 bits.        
+            </summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.SdpServiceNameAttributeId">
+            <summary>The Id of the Service Name SDP attribute</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC._lastErr">
+            <summary>last exception error</summary>
+        </member>
+        <member name="P:uTongsinLib_2017_st2.FBT_RfC.ResultCollection">
+            <summary>searching device</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfC.eTHREAD">
+            <summary>Number and Order of Threads</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eTHREAD.TH1">
+            <summary>Thread 1</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eTHREAD.TH2">
+            <summary>Thread 2</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eTHREAD.TH3">
+            <summary>Thread 3</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfC.eTHREAD.TH_COUNT">
+            <summary>Thread Count</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfC.stThread">
+            <summary>FBT_RfS generator</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.#ctor">
+            <summary>FBT_RfS generator</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Finalize">
+            <summary>FBT_RfS distructor</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.NotifyError">
+            <summary>called when an error occurs.</summary>
+            <returns>last error</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.StartWatching">
+            <summary>device seraching</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.StopWatching">
+            <summary>device search stop</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Watch_Add">
+            <summary>search event</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Watch_Update">
+            <summary>search event</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Watch_End">
+            <summary>search event</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Watch_Remove">
+            <summary>search event</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.Watch_Stop">
+            <summary>search event</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.OnConnection">
+            <summary>called when Connection</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.OnDisConnection">
+            <summary>called when disconnect</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.BTOpen(uTongsinLib_2017_st2.RfcommDeviceDisplay,System.Guid)">
+            <summary>Bluetooth open</summary>
+            <param name="device">connect device</param>
+            <param name="guid">guid</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.BTClose">
+            <summary>Bluetooth close</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.IsOpen">
+            <summary>Bluetooth open state</summary>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.SendMessage(System.String)">
+            <summary>Send Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.SendMessage(System.Byte[],System.Int32)">
+            <summary>Send Data</summary>
+            <param name="msg">literally</param>
+            <param name="offset">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.RecvMessageS(System.String)">
+            <summary>Recv Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.RecvMessageB(System.Byte[])">
+            <summary>Recv Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PreThread1">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PreThread2">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PreThread3">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PostThread1">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PostThread2">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PostThread3">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.ProcThread1">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.ProcThread2">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.ProcThread3">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.SetThreadInterval(uTongsinLib_2017_st2.FBT_RfC.eTHREAD,System.Int32)">
+            <summary>Changed the interval of the thread corresponding to the enum value.
+            Default : 10ms
+            </summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+            <param name="interval">unit : ms</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.CreateThread(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <summary>Create and Run Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.CloseThread(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <summary>Close Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.PauseThread(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <summary>Puase Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.AbortThread(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <summary>Destroy Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.WaitThreadTerminate(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <summary>After closing the thread, wait for an end.</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfC.IsAliveThread(uTongsinLib_2017_st2.FBT_RfC.eTHREAD)">
+            <param name="threadEnum">refer to enum eTHREAD</param>
+            <returns>return true if thread is alive.</returns>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.RfcommDeviceDisplay">
+            <summary>Bluetooth Device List Class</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.RfcommDeviceDisplay.#ctor(Windows.Devices.Enumeration.DeviceInformation)">
+            <summary>Bluetooth device list generator</summary>
+            <param name="deviceInfoIn">bluetooth device info</param>
+        </member>
+        <member name="P:uTongsinLib_2017_st2.RfcommDeviceDisplay.DeviceInformation">
+            <summary>device info Instance</summary>
+        </member>
+        <member name="P:uTongsinLib_2017_st2.RfcommDeviceDisplay.Id">
+            <summary>info id</summary>
+        </member>
+        <member name="P:uTongsinLib_2017_st2.RfcommDeviceDisplay.Name">
+            <summary>info name</summary>
+        </member>
+        <member name="P:uTongsinLib_2017_st2.RfcommDeviceDisplay.GlyphBitmapImage">
+            <summary>device image</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.RfcommDeviceDisplay.Update(Windows.Devices.Enumeration.DeviceInformationUpdate)">
+            <summary>device update</summary>
+            <param name="deviceInfoUpdate">update device</param>
+        </member>
+        <member name="E:uTongsinLib_2017_st2.RfcommDeviceDisplay.PropertyChanged">
+            <summary>property event handler</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.RfcommDeviceDisplay.OnPropertyChanged(System.String)">
+            <summary>property event</summary>
+            <param name="name">property name</param>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfS">
+            <summary>Bluetooth Rfcomm Server</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfS.eMODE">
+            <summary>recv type enum</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eMODE.TYPE_BY">
+            <summary>byte type</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eMODE.TYPE_ST">
+            <summary>string type</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.ERROR_DEVICE_NOT_AVAILABLE">
+            <summary> HRESULT_FROM_WIN32</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.ERROR_OPERATION_ABORTED">
+            <summary> HRESULT_FROM_WIN32</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.SdpServiceNameAttributeType">
+            <summary>
+            The SDP Type of the Service Name SDP attribute.
+            The first byte in the SDP Attribute encodes the SDP Attribute Type as follows :
+               -  the Attribute Type size in the least significant 3 bits,
+               -  the SDP Attribute Type value in the most significant 5 bits.        
+            </summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.SdpServiceName">
+            <summary>The value of the Service Name SDP attribute</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.SdpServiceNameAttributeId">
+            <summary>The Id of the Service Name SDP attribute</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS._lastErr">
+            <summary>last exception error</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfS.eTHREAD">
+            <summary>Number and Order of Threads</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eTHREAD.TH1">
+            <summary>Thread 1</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eTHREAD.TH2">
+            <summary>Thread 2</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eTHREAD.TH3">
+            <summary>Thread 3</summary>
+        </member>
+        <member name="F:uTongsinLib_2017_st2.FBT_RfS.eTHREAD.TH_COUNT">
+            <summary>Thread Count</summary>
+        </member>
+        <member name="T:uTongsinLib_2017_st2.FBT_RfS.stThread">
+            <summary>FBT_RfS generator</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.#ctor">
+            <summary>FBT_RfS generator</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.Finalize">
+            <summary>FBT_RfS distructor</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.SetMode(uTongsinLib_2017_st2.FBT_RfS.eMODE)">
+            <summary>set recv mode</summary>
+            <param name="mode">ref ENUM</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.NotifyError">
+            <summary>called when an error occurs.</summary>
+            <returns>last error</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.OnConnection">
+            <summary>called when Connection</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.OnDisConnection">
+            <summary>called when disconnect</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.BTOpen(System.Guid)">
+            <summary>Bluetooth open</summary>
+            <param name="guid">guid</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.BTClose">
+            <summary>Bluetooth close</summary>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.IsOpen">
+            <summary>Bluetooth open state</summary>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.SendMessage(System.String)">
+            <summary>Send Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.SendMessage(System.Byte[],System.Int32)">
+            <summary>Send Data</summary>
+            <param name="msg">literally</param>
+            <param name="offset">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.RecvMessageS(System.String)">
+            <summary>Recv Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.RecvMessageB(System.Byte[])">
+            <summary>Recv Data</summary>
+            <param name="msg">literally</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PreThread1">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PreThread2">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PreThread3">
+            <remarks>The first run when the thread is created.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PostThread1">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PostThread2">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PostThread3">
+            <remarks>The last time the thread is closed.</remarks>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.ProcThread1">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.ProcThread2">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.ProcThread3">
+            <returns>true : infinite, false : one time</returns>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.SetThreadInterval(uTongsinLib_2017_st2.FBT_RfS.eTHREAD,System.Int32)">
+            <summary>Changed the interval of the thread corresponding to the enum value.
+            Default : 10ms
+            </summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+            <param name="interval">unit : ms</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.CreateThread(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <summary>Create and Run Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.CloseThread(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <summary>Close Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.PauseThread(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <summary>Puase Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.AbortThread(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <summary>Destroy Thread</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.WaitThreadTerminate(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <summary>After closing the thread, wait for an end.</summary>
+            <param name="threadEnum">refer to enum eTHREAD</param>
+        </member>
+        <member name="M:uTongsinLib_2017_st2.FBT_RfS.IsAliveThread(uTongsinLib_2017_st2.FBT_RfS.eTHREAD)">
+            <param name="threadEnum">refer to enum eTHREAD</param>
+            <returns>return true if thread is alive.</returns>
+        </member>
+    </members>
+</doc>

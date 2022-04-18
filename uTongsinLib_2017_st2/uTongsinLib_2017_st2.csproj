@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetPlatformVersion>10.0</TargetPlatformVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Projects\VS2017\Projects\CS Library .Net Standard\_build\Debug\uTongsinLib_2017_st2.xml</DocumentationFile>
+    <OutputPath>C:\Projects\VS2017\Projects\CS Library .Net Standard\_build\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.WindowsRuntime" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="umhha">
+      <HintPath>lib\umhha.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows">
+      <HintPath>lib\Windows.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="Windows.AI.MachineLearning.MachineLearningContract">
+      <HintPath>lib\Windows.AI.MachineLearning.MachineLearningContract.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>lib\WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsInput">
+      <HintPath>lib\WindowsInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
